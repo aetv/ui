@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://levels/level 1.gd" type="Script" id=1]
+[ext_resource path="res://Left Display Tab/boxes/BOXES/filler.png" type="Texture" id=2]
+[ext_resource path="res://Left Display Tab/boxes/BOXES/shading.png" type="Texture" id=3]
+[ext_resource path="res://Left Display Tab/boxes/BOXES/outline.png" type="Texture" id=4]
+[ext_resource path="res://levels/Timer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://font/Chubby.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Left_Display_Tab.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 24
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Level 1" type="Control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Control" parent="."]
+margin_left = 35.6044
+margin_top = 540.28
+margin_right = 153.604
+margin_bottom = 573.28
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Timer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Timer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="Timer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 100, 30 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Timer" parent="Timer" instance=ExtResource( 5 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -49.0
+margin_top = -16.5
+margin_right = 69.0
+margin_bottom = 16.5
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.54902, 0.137255, 0.564706, 1 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.22772
+margin_top = -1.22775
+margin_right = 1.22778
+margin_bottom = -1.22778
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Left_Display_Tab" parent="." instance=ExtResource( 7 )]
+
+[node name="Tween" type="Tween" parent="."]
