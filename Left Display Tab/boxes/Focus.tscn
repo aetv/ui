@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Left Display Tab/boxes/BOXES/outline.png" type="Texture" id=1]
+
+[node name="Focus" type="TextureRect"]
+margin_right = 65.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 65, 65 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -5.0
+margin_top = -4.22623
+margin_right = 70.0
+margin_bottom = 70.7738
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -5.0
+margin_top = 65.0
+margin_right = 70.0
+margin_bottom = 87.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
